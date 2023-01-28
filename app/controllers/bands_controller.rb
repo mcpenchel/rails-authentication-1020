@@ -1,5 +1,7 @@
 class BandsController < ApplicationController
   before_action :set_band, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate_user!, only: [:index]
+
 
   # GET /bands or /bands.json
   def index
