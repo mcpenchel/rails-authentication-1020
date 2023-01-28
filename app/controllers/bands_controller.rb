@@ -5,7 +5,7 @@ class BandsController < ApplicationController
 
   # GET /bands or /bands.json
   def index
-    @bands = Band.all
+    @bands = Band.where(genre: 'Prog Metal')
   end
 
   # GET /bands/1 or /bands/1.json
